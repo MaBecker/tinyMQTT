@@ -26,12 +26,16 @@
   function onDat(data) {
     var cmd = data.charCodeAt(0);
     if (cmd >> 4 === 3) {
+      var data_len = data.length;
+      var packet_len = data.charCodeAt(1);
       var var_len = (data.charCodeAt(2) << 8) | data.charCodeAt(3);
       var msg = {
         topic: data.substr(4, var_len),
-        message: data.substr(4 + var_len, data.charCodeAt(1) - var_len)
+        message: data.substr(4 + var_len, packet_len - var_len - 2)
       };
       _q.emit("message", msg);
+      if (data_len > packet_len + 2)
+        onDat(data.substr(packet_len + 2, data_len - packet_len));
     }
   }
 

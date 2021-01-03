@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/olliephillips/tinyMQTT.git"
+    "url": "git+https://github.com/MaBecker/tinyMQTT.git"
   },
   "keywords": [
     "Espruino",
@@ -21,7 +21,7 @@
   "author": "olliephillips",
   "license": "MPL-2.0",
   "bugs": {
-    "url": "https://github.com/olliephillips/tinyMQTT/issues"
+    "url": "https://github.com/MaBecker/tinyMQTT/issues"
   },
-  "homepage": "https://github.com/olliephillips/tinyMQTT#readme"
+  "homepage": "https://github.com/MaBecker/tinyMQTT#readme"
 }
